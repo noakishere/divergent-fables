@@ -6,6 +6,8 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Stack, useRouter } from "expo-router";
 
 const Home = () => {
+	const router = useRouter();
+
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: "#e7e7e7" }}>
 			<Stack.Screen
@@ -21,11 +23,11 @@ const Home = () => {
 					},
 				}}
 			/>
-			<ScrollView showsVerticalScrollIndicator={false} style={styles.MainBG}>
+			{/* <ScrollView showsVerticalScrollIndicator={false} style={styles.MainBG}>
 				<Navbar />
-			</ScrollView>
+			</ScrollView> */}
 
-			{/* <FableCamera /> */}
+			<FableCamera />
 		</SafeAreaView>
 		// <Test />
 	);

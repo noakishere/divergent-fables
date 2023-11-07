@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet, Pressable } from "react-native";
+import { View, Text, TouchableOpacity, StyleSheet, Pressable, Image } from "react-native";
 import Navbar from "../src/components/navbar";
 import { Camera, CameraType } from "expo-camera";
 import React, { useState, useEffect, useRef } from "react";
@@ -11,6 +11,8 @@ const FableCamera = () => {
 	const [hasPermission, setHasPermission] = useState(false);
 	const [capturedImage, setCapturedImage] = useState(null);
 	const cameraRef = useRef(null);
+
+	const [showCamera, setShowCamera] = useState(true);
 
 	// async method to get permission
 	useEffect(() => {
@@ -32,6 +34,8 @@ const FableCamera = () => {
 		if (cameraRef.current) {
 			const photo = await cameraRef.current.takePictureAsync();
 			setCapturedImage(photo);
+			setShowCamera(false);
+			console.log(photo);
 		}
 	};
 
@@ -59,15 +63,29 @@ const FableCamera = () => {
 	return (
 		<View style={{ flex: 1 }}>
 			{hasPermission ? (
-				<View style={{ flex: 1, height: 50 }}>
-					<Camera style={{ flex: 1 }} type={cameraType}>
+				showCamera ? (
+					<View style={{ flex: 1 }}>
+						<Camera style={{ flex: 1 }} type={cameraType} ref={cameraRef}>
+							<View>
+								<Pressable onPress={toggleCameraType}>
+									<Text>Toggle</Text>
+								</Pressable>
+								<Pressable onPress={takePicture}>
+									<Text>Submit</Text>
+								</Pressable>
+							</View>
+						</Camera>
+					</View>
+				) : (
+					<View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
+						<Image source={{ uri: capturedImage.uri }} style={{ width: 500, height: 500 }} />
 						<View>
-							<Pressable onPress={toggleCameraType}>
-								<Text>Toggle</Text>
+							<Pressable onPress={saveImageToCache}>
+								<Text>Save</Text>
 							</Pressable>
 						</View>
-					</Camera>
-				</View>
+					</View>
+				)
 			) : (
 				<Text>No access to camera</Text>
 			)}
