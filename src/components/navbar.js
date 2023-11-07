@@ -6,6 +6,8 @@ import { Link, router } from "expo-router";
 import LoginField from "./loginField";
 import RegisterField from "./registerField";
 
+import NavbarButton from "./navbarBtn";
+
 export default function Navbar() {
 	const [text, onChangeText] = React.useState("");
 	const [isTryingToLogin, onChangeIsTryingToLogin] = React.useState(false);
@@ -44,22 +46,10 @@ export default function Navbar() {
 	return (
 		<View style={styles.container}>
 			<View style={styles.buttonsContainer}>
-				<Pressable style={styles.button}>
-					<Image style={styles.navButton} source={require("../../assets/home.png")} />
-					{/* <Text style={styles.text}>H</Text> */}
-				</Pressable>
-				<Pressable style={styles.button}>
-					<Image style={styles.navButton} source={require("../../assets/play.png")} />
-					{/* <Text style={styles.text}>P</Text> */}
-				</Pressable>
-				<Pressable style={styles.button}>
-					<Image style={styles.navButton} source={require("../../assets/profile.png")} />
-					{/* <Text style={styles.text}>U</Text> */}
-				</Pressable>
-				<Pressable style={styles.button}>
-					<Image style={styles.navButton} source={require("../../assets/gallery.png")} />
-					{/* <Text style={styles.text}>G</Text> */}
-				</Pressable>
+				<NavbarButton iconUrl={require("../../assets/home.png")} pageRouteUrl={""} />
+				<NavbarButton iconUrl={require("../../assets/play.png")} pageRouteUrl={"/play"} />
+				<NavbarButton iconUrl={require("../../assets/profile.png")} />
+				<NavbarButton iconUrl={require("../../assets/gallery.png")} pageRouteUrl={"/gallery"} />
 			</View>
 			<Text style={styles.labelText}>login/register</Text>
 			<SafeAreaView>
@@ -73,7 +63,7 @@ export default function Navbar() {
 			<View style={styles.loginButtonsContainer}>
 				{/* <Link href={"/src/screens/login"}> */}
 				<Pressable onPress={AppearLogin} style={styles.loginButton}>
-					<Text style={styles.text}>Login</Text>
+					<Text style={styles.text}>login</Text>
 				</Pressable>
 				{/* </Link> */}
 				<Pressable onPress={AppearRegister} style={styles.registerButton}>
@@ -126,6 +116,7 @@ const styles = StyleSheet.create({
 	labelText: {
 		color: "#666666",
 		fontWeight: "bold",
+		marginTop: 50,
 	},
 	container: {
 		flex: 1,
@@ -136,8 +127,6 @@ const styles = StyleSheet.create({
 	input: {
 		width: 300,
 		height: 40,
-		margin: 12,
-		marginTop: 20,
 		borderWidth: 1,
 		padding: 10,
 	},

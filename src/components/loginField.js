@@ -1,10 +1,16 @@
 import { StyleSheet, Text, View, Pressable, TextInput } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { router } from "expo-router";
 
 import React from "react";
 
 const LoginField = () => {
 	// const [text, onChangeText] = React.useState("");
+
+	//test function
+	function goToCamera() {
+		router.replace("/fableCamera");
+	}
 
 	return (
 		<View>
@@ -18,7 +24,7 @@ const LoginField = () => {
 			</SafeAreaView>
 
 			<View style={styles.buttonContainer}>
-				<Pressable style={styles.submitButton}>
+				<Pressable onPress={goToCamera} style={styles.submitButton}>
 					<Text style={styles.text}>Submit</Text>
 				</Pressable>
 			</View>
