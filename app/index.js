@@ -1,6 +1,7 @@
 import { View, Text, ScrollView } from "react-native";
 import { StyleSheet } from "react-native-web";
 import Navbar from "../src/components/navbar";
+import FableCamera from "./fableCamera";
 
 const Home = () => {
 	return (
@@ -10,6 +11,7 @@ const Home = () => {
 		<ScrollView style={styles.MainBG}>
 			<Navbar />
 		</ScrollView>
+		// <Test />
 	);
 };
 

@@ -41,12 +41,9 @@ const styles = StyleSheet.create({
 		padding: 10,
 	},
 	submitButton: {
-		alignItems: "center",
-		justifyContent: "center",
-		paddingVertical: 12,
-		paddingHorizontal: 32,
-		borderRadius: 4,
-		elevation: 3,
+		textAlign: "center",
+		padding: 10,
+		// marginRight: 10,
 		borderWidth: 1,
 	},
 	text: {
