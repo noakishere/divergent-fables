@@ -1,0 +1,96 @@
+{
+	"regular": {
+		"title": "Poses",
+		"prompts": [
+			["Show me a power pose!", "How's the most powerful you can look like?"],
+			["Show me a sincere laugh", "What causes you to laugh this hard? It's beautiful"]
+		]
+	},
+	"LittleRed": {
+		"title": "Little Red Riding Hood",
+		"prompts": [
+			[
+				"Walking through the forest and feeling curious.",
+				"You are on your way to visit your grandmother, who lives deep in the forest. Along the way, you encounter many interesting sights and sounds."
+			],
+			[
+				"Meeting the Big Bad Wolf and feeling cautious.",
+				"While walking through the forest, you meet a sly and cunning wolf who asks you many questions about your destination."
+			],
+			[
+				"Arriving at your grandmother's house and feeling excited.",
+				"You finally arrive at your grandmother's house, feeling happy and excited to see her. You share many stories and laughs together."
+			],
+			[
+				"Discovering the wolf in disguise and feeling frightened.",
+				"You discover that the wolf has disguised himself as your grandmother, and you are terrified by his deception."
+			],
+			[
+				"Outsmarting the wolf and feeling clever.",
+				"You use your wit and cunning to outsmart the wolf, tricking him into revealing his true identity."
+			],
+			[
+				"Escaping from the wolf's clutches and feeling relieved.",
+				"You escape from the wolf's grasp and run to safety, feeling relieved and grateful to be alive."
+			],
+			[
+				"Navigating the forest alone and feeling independent.",
+				"You venture back into the forest alone, feeling confident and independent in your abilities."
+			],
+			[
+				"Meeting other creatures in the forest and feeling connected.",
+				"Along your journey, you meet many other creatures of the forest, and feel a deep sense of connection and belonging with them."
+			],
+			[
+				"Returning home and feeling changed.",
+				"After your harrowing experience with the wolf, you return home feeling different and changed by the events that have transpired."
+			]
+		]
+	},
+
+	"SnowWhite": {
+		"title": "Snow White",
+		"prompts": [
+			[
+				"Fleeing from the Evil Queen's castle and feeling scared.",
+				"You are on the run from the Evil Queen, who wants you dead because she is jealous of your beauty. You must navigate the treacherous forest alone, while trying to avoid capture."
+			],
+			[
+				"Discovering the seven dwarfs' cottage and feeling relieved.",
+				"After wandering through the forest for hours, you stumble upon a small cottage in a clearing. Inside, you meet the seven dwarfs who offer you shelter and comfort."
+			],
+			[
+				"Befriending the seven dwarfs and feeling happy.",
+				"You spend many happy days with the seven dwarfs, cooking and cleaning together, and singing and dancing around the cottage."
+			],
+			[
+				"Pricking a finger on the poisoned apple and feeling drowsy.",
+				"One day, a mysterious old woman offers you a shiny red apple. Despite warnings from the dwarfs, you take a bite and fall into a deep sleep."
+			],
+			[
+				"Being saved by the prince's kiss and feeling grateful.",
+				"A handsome prince happens upon your glass coffin and is immediately smitten with you. He kisses you, breaking the curse and awakening you from your slumber."
+			],
+			[
+				"Celebrating the defeat of the Evil Queen and feeling triumphant.",
+				"The Evil Queen is finally defeated, and you celebrate with the seven dwarfs and the prince. You are finally able to live in peace and happiness."
+			],
+			[
+				"Dancing with the prince at the ball and feeling joyful.",
+				"The prince invites you to a grand ball, where you dance together and fall even more deeply in love."
+			],
+			[
+				"Escaping into the forest and feeling lost.",
+				"The Evil Queen returns and you must flee into the forest once again. You become separated from the prince and the dwarfs, and must navigate the forest alone."
+			],
+			[
+				"Discovering the glass coffin and feeling sorrowful.",
+				"You stumble upon your own glass coffin and realize that the Evil Queen has returned to finish what she started. You are overcome with grief and fear."
+			],
+			[
+				"Awakening from the spell and feeling reborn.",
+				"The prince and the dwarfs find you in the glass coffin and revive you once again. You emerge from the spell feeling renewed and ready to start your new life."
+			]
+		]
+	}
+}

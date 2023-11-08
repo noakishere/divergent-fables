@@ -23,11 +23,11 @@ const Home = () => {
 					},
 				}}
 			/>
-			{/* <ScrollView showsVerticalScrollIndicator={false} style={styles.MainBG}>
+			<ScrollView showsVerticalScrollIndicator={false} style={styles.MainBG}>
 				<Navbar />
-			</ScrollView> */}
+			</ScrollView>
 
-			<FableCamera />
+			{/* <FableCamera /> */}
 		</SafeAreaView>
 		// <Test />
 	);

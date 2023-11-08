@@ -40,10 +40,11 @@ const FableCamera = () => {
 	};
 
 	const saveImageToCache = async () => {
+		// console.log({ uri: capturedImage.uri.split("/Camera/")[1] });
 		if (capturedImage) {
 			const cacheDirectory = FileSystem.cacheDirectory;
-			const fileName = "captured_image.jpg";
-			const imagePath = `${cacheDirectory}${fileName}`;
+			const fileName = { uri: capturedImage.uri.split("/Camera/")[1] };
+			const imagePath = `${cacheDirectory}${fileName.uri}`;
 
 			try {
 				await FileSystem.copyAsync({
